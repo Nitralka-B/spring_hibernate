@@ -33,13 +33,7 @@ public class UserServiceImp implements UserService {
 
    @Transactional
    @Override
-   public void getUserByCar(int series){
-      User user = userDao.getUserByCar(series);
-      System.out.println("Id = "+user.getId());
-      System.out.println("First Name = "+user.getFirstName());
-      System.out.println("Last Name = "+user.getLastName());
-      System.out.println("Email = "+user.getEmail());
-      System.out.println("CarSeries = " + user.getCar().getSeries());
-      System.out.println();
+   public List<User> getUserByCar(int series, String model){
+      return userDao.getUserByCar(series, model);
    }
 }

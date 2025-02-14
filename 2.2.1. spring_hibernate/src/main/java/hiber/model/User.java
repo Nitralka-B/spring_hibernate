@@ -22,7 +22,7 @@ public class User {
    private String email;
 
    @OneToOne
-   @JoinColumn(name = "car_series", referencedColumnName = "series")
+   @JoinColumn(name = "car_series", referencedColumnName = "id")
    private Car car;
 
    public User() {}

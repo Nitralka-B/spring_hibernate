@@ -42,7 +42,15 @@ public class MainApp {
          System.out.println();
       }
 
-      userService.getUserByCar(3);
+      List<User> usersByCar = userService.getUserByCar(3, "BMW");
+      for (User user : usersByCar) {
+         System.out.println("Id = "+user.getId());
+         System.out.println("First Name = "+user.getFirstName());
+         System.out.println("Last Name = "+user.getLastName());
+         System.out.println("Email = "+user.getEmail());
+         System.out.println("CarSeries = " + user.getCar().getSeries());
+         System.out.println();
+      }
 
       context.close();
    }
